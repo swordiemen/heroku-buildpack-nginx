@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+echo 'solo bolo'
+
 psmgr=/tmp/nginx-buildpack-wait
 rm -f $psmgr
 mkfifo $psmgr
