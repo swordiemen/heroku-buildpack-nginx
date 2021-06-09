@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-echo 'solo bolo'
+echo 'Solo'
 
 psmgr=/tmp/nginx-buildpack-wait
 rm -f $psmgr
