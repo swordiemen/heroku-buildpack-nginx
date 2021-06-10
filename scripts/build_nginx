@@ -3,6 +3,7 @@
 # This script is designed to run in a Heroku Stack Docker
 # image. More information on the Heroku Stack can be found
 # at https://devcenter.heroku.com/articles/stack
+echo 'Start'
 
 NGINX_VERSION=${NGINX_VERSION-1.20.1}
 PCRE_VERSION=${PCRE_VERSION-8.44}
@@ -45,7 +46,7 @@ echo "Downloading $uuid4_url"
     --with-http_gzip_static_module \
     --with-http_realip_module \
     --with-http_ssl_module \
-    --with-stream123 \
+    --with-stream \
     --prefix=/tmp/nginx \
     --add-module=${temp_dir}/nginx-${NGINX_VERSION}/headers-more-nginx-module-${HEADERS_MORE_VERSION} \
     --add-module=${temp_dir}/nginx-${NGINX_VERSION}/nginx-uuid4-module-${UUID4_VERSION}
